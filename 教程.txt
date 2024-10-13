@@ -1,0 +1,34 @@
+1.在电报上搜索 BotFather ，如图第一个。点击BotFather后，在对话框下方点击开始与BotFather对话
+
+点击命令 /newbot  按照引导依次输入。
+
+机器人昵称：ChatGPT-LD
+
+机器人用户名：chatgpt_ld_bot   （必须_bot结尾）
+
+最后回复内容是机器人创建成功！红框内的字符串为该机器人的Token（重要信息不能轻易泄露给别人）。
+
+2.然后回到自己的VPS上执行安装nodejs命令：
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt-get install nodejs
+
+
+3.安装pm2守护进程，一会要用到
+npm install pm2 -g
+
+4.然后下载并安装接入的机器人
+git clone https://github.com/香蕉哥/chatgpt-bot-telegram.git
+cd chatgpt-bot-telegram
+npm install
+
+5.复制一个.env文件，然后修改配置文件。注意：编辑文件的时候请使用Notepad++或者Editplus ，否则可能会造成编码出错
+vim .env
+直接编辑 .env 文件
+
+API = 就是你在openAI官网上生成的apikey
+
+TG_API = 就是telegram机器人生成的token
+
+5.保存好配置文件后，启动执行下方的启动命令，就可以和机器人聊天了！
+pm2 start index.js
+大功告成！
