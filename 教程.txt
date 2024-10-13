@@ -17,7 +17,7 @@ sudo apt-get install nodejs
 npm install pm2 -g
 
 4.然后下载并安装接入的机器人
-git clone https://github.com/香蕉哥/chatgpt-bot-telegram.git
+git clone https://github.com/qq58656649/chatgpt-bot-telegram.git
 cd chatgpt-bot-telegram
 npm install
 
