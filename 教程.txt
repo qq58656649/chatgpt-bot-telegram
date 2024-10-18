@@ -32,3 +32,20 @@ TG_API = 就是telegram机器人生成的token
 5.保存好配置文件后，启动执行下方的启动命令，就可以和机器人聊天了！
 pm2 start index.js
 大功告成！
+最后提醒下的是，如果需要在后台守护进程运行
+
+那么只需运行下面命令
+
+apt-get install screen
+screen -S chatgpt
+运行以后再运行之前的命令就可以了，
+
+启动成功后，按Ctrl +A+D 即可挂起后台服务。
+
+想看运行情况
+
+screen -R chatgpt
+
+就可以查看了~
+
+这样即使你断开VPS，机器人也会在后台运行。
